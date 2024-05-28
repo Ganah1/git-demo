@@ -11,3 +11,14 @@ factorial() {
     echo $result
 }
 
+# Read user input
+read -p "Enter a number: " number
+
+# Check if the input is a valid number
+if [[ $number =~ ^[0-9]+$ ]]; then
+    # Calculate the factorial
+    fact=$(factorial $number)
+    echo "The factorial of $number is: $fact"
+else
+    echo "Please enter a valid positive integer."
+fi
